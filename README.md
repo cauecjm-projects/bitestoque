@@ -25,7 +25,7 @@ Aplicativo para gerenciamento de estoque. Desenvolvido para fins de estudos de d
 - Dockerfile
 - docker-compose version 3
 
-## Executar testes automatizados:
+## Execução de testes automatizados:
 
 ```
 docker-compose run --rm app bundle exec rspec spec/*
