@@ -1,0 +1,19 @@
+default: &default
+  adapter:  postgresql
+  encoding: utf8
+  username: postgres
+  pool:     5
+  timeout:  5000
+  host:     postgres
+
+development:
+  <<: *default
+  database: bitestoque_development
+
+test:
+  <<: *default
+  database: bitestoque_test
+
+production:
+  <<: *default
+  database: bitestoque_production

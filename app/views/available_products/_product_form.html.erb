@@ -1,0 +1,33 @@
+<div class='row no-gutters'>
+  <div class='col-12 col-lg-4 px-1 form-group'>
+    <label for='product_name'>Produto</label>
+    <%= text_field('product_name', nil, class:'form-control', placeholder: 'Nome do produto', maxlength: 100) %>
+  </div>
+
+  <div class='col-12 col-lg-4 px-1 form-group'>
+    <label for='product_description'>Descrição</label>
+    <%= text_field('product_description', nil, class:'form-control', placeholder: 'Descrição do produto') %>
+  </div>
+
+  <div class='col-12 col-lg-2 px-1 form-group'>
+    <label for='product_description'>Tamanho</label>
+    <%= select_tag('size', options_from_collection_for_select(@sizes,'id','description'), include_blank: 'Selecione', class: 'form-control form-control' ) %>
+  </div>
+
+  <div class='col-12 col-lg-2 px-1 form-group'>
+    <label for='product_description'>Qtd</label>
+    <%= text_field('qtd', nil, class:'form-control', placeholder: 'Qtd') %>
+  </div>
+
+  <div class='col-12 px-1'>
+    <label for='product_description'>Cor</label>
+    <%= render 'color_list' %>
+  </div>
+</div>
+
+<div class='row no-gutters mt-3'>
+  <div class='col-12 text-right'>
+    <div class='mx-1 btn btn-outline-success btn-salvar'>Salvar</div>
+    <div class='mx-1 btn btn-outline-danger btn-cancelar'>Cancelar</div>
+  </div>
+</div>

@@ -1,0 +1,7 @@
+<div class='row no-gutters justify-content-center'>
+  <div class='col-12'>
+    <% @colors.each do |color| %>
+      <div class='dv-color m-1' style='background-color:<%= color.code %>' title='<%= color.name %>' id='<%= color.id %>'></div>
+    <% end %>
+  </div>
+</div>

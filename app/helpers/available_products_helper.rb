@@ -1,0 +1,2 @@
+module AvailableProductsHelper
+end

@@ -1,0 +1,41 @@
+<div class='row no-gutters justify-content-center'>
+  <div class='col-11 col-lg-8'>
+    <div class='btn btn-outline-info btn-cadastrar'>Cadastrar Produto</div>
+  </div>
+</div>
+
+<div class='row no-gutters justify-content-center d-none form-dv'>
+  <div class='col-11 col-lg-8 pb-4 border border-info border-top-0 border-right-0 border-left-0'>
+    <h4 class='text-center mb-0 form-title'>Cadastrar Produto</h4>
+  </div>
+
+  <div class='col-11 py-3 col-lg-8'>
+    <%= form_tag('available-products', remote: true, id: 'available_products_form') do %>
+      <%= hidden_field_tag('available_product_id', 0) %>
+      <%= hidden_field_tag('color_selected_id',0) %>
+
+      <%= render 'product_form' %>
+    <% end %>
+  </div>
+</div>
+
+<div class='row no-gutters mt-4 pt-3 justify-content-center'>
+  <div class='col-11 col-lg-8 pb-4 border border-info border-top-0 border-right-0 border-left-0'>
+    <h4 class='text-center mb-0'>Produtos Disponíveis</h4>
+  </div>
+
+  <div class='col-11 col-lg-8 mt-5 available-products-dv'>
+    <table class='table table-striped table-hover table-sm available-products-table'>
+      <thead>
+        <tr>
+          <th class='col-7'>Produto</th>
+          <th class='col-1 text-center'>Tamanho</th>
+          <th class='col-1 text-center'>Cor</th>
+          <th class='col-1 text-center'>Qtd</th>
+          <th class='col-1'></th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+</div>
